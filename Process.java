@@ -10,17 +10,23 @@ public class Process implements Priority, Comparable<Process>
 {
 private final String processID;//the ID of the process
 private int priority;//the priority of the process
+	
+	/**
+	 * 
+	 * @param processID
+	 */
 	public Process(String processID)
 	{
 		this.processID = processID;
-	}
+	}//end constructor
+	
 	/**
  	* @return the processID
  	*/
 	public String getProcessID() 
 	{
 		return processID;
-	}
+	}//end getProcessID
 	
 	/**
 	 * @return the priority
@@ -28,7 +34,7 @@ private int priority;//the priority of the process
 	public int getPriority() 
 	{
 		return priority;
-	}
+	}//end getPriority
 	
 	/**
 	 * @param priority the priority to set
@@ -49,7 +55,7 @@ private int priority;//the priority of the process
 	public String toString() 
 	{
 		return "Process [processID=" + processID + ", priority=" + priority + "]";
-	}
+	}//end toString
 	
 	/**
 	 * 

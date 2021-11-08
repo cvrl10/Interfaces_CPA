@@ -39,6 +39,7 @@ public class Application
 				+"this implementation of the Comparable interface compares the status of the tasks\n"
 				+ "this method returns a positive integer since this task is COMPLETE, when compare to the argument's IN_PROCESS status\n"
 				+"the integer returned from compareTo is: "+task.compareTo(sleep));
+		
 		//sleep.setName("Testing the setName method of the class.");
 		System.out.println(sleep.getName());
 		
@@ -67,6 +68,15 @@ public class Application
 				+"if this priority is equal to the argument's priority, the integer returned is 0\n"
 				+"if this priority is greater than the argument's priority, the integer returned is positive\n"
 				+"if this priority is less than the argument's priroty, the integer returned is negative\n"
-				+"the integer returned from compareTo is: "+process.compareTo(videoGame));
+				+"the integer returned from compareTo is: "+process.compareTo(videoGame));int[] integer = {Priority.MIN_PRIORITY, Priority.MIN_PRIORITY, Priority.MAX_PRIORITY};
+		
+		for (int i = 0; i < 3; i++)
+		{
+			process.setPriority(integer[i]);
+			System.out.print(process.compareTo(videoGame)+" ");
+		}
+		process.setPriority(Priority.MIN_PRIORITY);
+		videoGame.setPriority(Priority.MED_PRIORITY );
+		System.out.print("\nchanged the priorities such that compareTo returns negative: "+process.compareTo(videoGame));
 	}//end main
 }//end class
